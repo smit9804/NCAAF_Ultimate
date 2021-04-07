@@ -7,6 +7,10 @@ const FootballSchema = new mongoose.Schema({
         required: [true, "Team name is required"]
     },
 
+    town: {
+        type: String
+    },
+
     mascot: {
         type: String
     },

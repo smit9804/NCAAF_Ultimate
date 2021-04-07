@@ -9,6 +9,7 @@ const EditTeam = (props) => {
     const [ conference, setConference ] = useState("");
     const [ color1, setColor1 ] = useState("");
     const [ color2, setColor2 ] = useState("");
+    const [ town, setTown ] = useState("")
 
     useEffect(() => {
         axios.get("http://localhost:8000/api/footballs/" + id)
@@ -18,13 +19,14 @@ const EditTeam = (props) => {
                 setConference(res.data.football.conference);
                 setColor1(res.data.football.color1);
                 setColor2(res.data.football.color2);
+                setTown(res.data.football.town);
             })
             .catch(err => console.log(err))
     }, [id])
 
     const update = (e) => {
         e.preventDefault();
-        const changedTeam = {name, mascot, conference, color1, color2}
+        const changedTeam = {name, mascot, conference, color1, color2, town}
         axios.put("http://localhost:8000/api/footballs/update/" + id, changedTeam)
             .then(res => {
                 console.log(res.data.football);
@@ -42,6 +44,10 @@ const EditTeam = (props) => {
                             <div className="form-group">
                                 <label>Team Name:</label>
                                 <input value={name} className="form-control" type="text" onChange={e => setName(e.target.value)} />
+                            </div>
+                            <div className="form-group">
+                                <label>Team Town::</label>
+                                <input value={town} className="form-control" type="text" onChange={e => setTown(e.target.value)} />
                             </div>
                             <div className="form-group">
                                 <label>Mascot:</label>

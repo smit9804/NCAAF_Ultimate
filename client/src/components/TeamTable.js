@@ -20,7 +20,7 @@ const TeamTable = (props) => {
 
     useEffect (() => {
         fetchTeams();
-    }, [isUpdated])
+    }, [isUpdated, fetchTeams])
     return (
         <div>
             <h1 class="beach">Teams by Conference</h1>

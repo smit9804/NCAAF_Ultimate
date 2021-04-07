@@ -114,18 +114,18 @@ const TeamPicker = (props) => {
     <div>
         <div class="teamer">
             <div>
-                <div style={{height: "300px", width: "300px", border: "2px solid antiquewhite", backgroundColor: teamcolor1, color: teamaltColor1 }}>
+                <div style={{height: "300px", width: "300px", border: "2px solid antiquewhite", backgroundColor: teamcolor1, color: teamaltColor1, alignContent: "center" }}>
                     <h1><Link style={{color: teamaltColor1}} to={`/${teamID1}`}>{team1} {mascot1}</Link></h1>
                     <br/>
-                    <button onClick={(e) => { teamWin1(e, teamID1); teamLoss2(e, teamID2); onClickHandler1()}}  class="blackbtn">{team1} would win</button>
                 </div>
+                    <button onClick={(e) => { teamWin1(e, teamID1); teamLoss2(e, teamID2); onClickHandler1()}}  class="blackbtn">{team1} would win</button>
             </div>
             <div>
                 <div style={{height: "300px", width: "300px", border: "2px solid antiquewhite", backgroundColor: teamcolor2, color: teamaltColor2 }}>
                     <h1><Link style={{color: teamaltColor2}} to={`/${teamID2}`}>{team2} {mascot2}</Link></h1>
                     <br/>
-                    <button onClick={(e) => { teamWin2(e, teamID2); teamLoss1(e, teamID1); onClickHandler1()}} class="blackbtn">{team2} would win</button>
                 </div>
+                    <button onClick={(e) => { teamWin2(e, teamID2); teamLoss1(e, teamID1); onClickHandler1()}} class="blackbtn">{team2} would win</button>
             </div>
         </div>
         <button class="bluebtn" onClick={onClickHandler1}>Get a Random Matchup!</button>
