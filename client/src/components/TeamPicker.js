@@ -11,6 +11,7 @@ const TeamPicker = (props) => {
     const [ pickedWins1, setPickedWins1 ] = useState(0)
     const [ pickedLosses1, setPickedLosses1 ] = useState(0)
     const [ mascot1, setMascot1 ] = useState("")
+    
     const [ teamID2, setTeamID2] = useState("")
     const [ team2, setTeam2] = useState([]);
     const [ teamcolor2, setTeamColor2] = useState("")

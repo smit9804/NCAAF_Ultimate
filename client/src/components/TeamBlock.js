@@ -9,6 +9,7 @@ const TeamBlock = (props) => {
             <div className="container">
                 <h1>{team.name} {team.mascot}</h1>
                 <h2>{team.town}</h2>
+                <h2>{team.stadium}</h2>
                 <h2>{team.conference}</h2>
                 <h2>{team.color1}</h2>
                 <div style={{backgroundColor: team.color1, height: "75px", alignItems: "center"}}/>

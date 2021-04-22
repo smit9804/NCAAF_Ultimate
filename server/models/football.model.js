@@ -10,6 +10,9 @@ const FootballSchema = new mongoose.Schema({
     town: {
         type: String
     },
+    stadium: {
+        type: String
+    },
 
     mascot: {
         type: String

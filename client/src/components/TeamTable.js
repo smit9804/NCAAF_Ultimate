@@ -5,7 +5,7 @@ import { Link } from '@reach/router'
 const TeamTable = (props) => {
 
     const {teams, setTeams, isUpdated} = props
-    const [ conf, setConf] = useState("");
+    const [ conf, setConf] = useState("ACC");
 
     const fetchTeams = () => {
         axios.get("http://localhost:8000/api/footballs/")
